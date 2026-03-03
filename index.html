@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyecto de landing sobre música — HTML, CSS y JavaScript vanilla. Portfolio en formación.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="icon" type="image/png" href="assets/img/icon/app_icon.png">
+    <title>Música — Proyecto en formación</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="hero" id="inicio">
+            <div class="hero-overlay">
+                <nav class="nav" role="navigation" aria-label="Menú principal">
+                    <a href="#inicio" class="nav-logo" aria-label="Inicio">
+                        <img src="assets/img/nota-musical.png" alt="" class="nav-icon" width="40" height="40">
+                    </a>
+                    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
+                        <span class="nav-toggle-bar"></span>
+                        <span class="nav-toggle-bar"></span>
+                        <span class="nav-toggle-bar"></span>
+                    </button>
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#musica">Música</a></li>
+                        <li><a href="#acerca">Acerca de</a></li>
+                        <li><a href="#stack">Stack</a></li>
+                    </ul>
+                </nav>
+                <div class="hero-content">
+                    <h1 class="hero-title">Que siga sonando la música en ti</h1>
+                    <p class="hero-subtitle">Landing hecha con HTML, CSS y JavaScript sin frameworks</p>
+                    <a href="#musica" class="hero-cta">Ver más</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="features" id="musica" aria-labelledby="features-heading">
+                <h2 id="features-heading" class="section-title">Por qué este espacio</h2>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-img-wrap">
+                            <img src="assets/img/sonreir.png" alt="Ilustración amigable" class="feature-img" width="280" height="280" loading="lazy">
+                        </div>
+                        <h3 class="feature-title">Amigable</h3>
+                        <p>Interfaz clara y accesible para disfrutar del contenido.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-img-wrap">
+                            <img src="assets/img/musica.png" alt="Ilustración música" class="feature-img" width="280" height="280" loading="lazy">
+                        </div>
+                        <h3 class="feature-title">Música completa</h3>
+                        <p>Un lugar para explorar y conectar con lo que te gusta.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-img-wrap">
+                            <img src="assets/img/cantando.png" alt="Ilustración artistas" class="feature-img" width="280" height="280" loading="lazy">
+                        </div>
+                        <h3 class="feature-title">Artistas</h3>
+                        <p>Descubre y sigue a tus artistas favoritos.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="content-block content-block--alt" aria-labelledby="block1-heading">
+                <div class="content-block-inner">
+                    <h2 id="block1-heading" class="content-block-title">La música que más te gusta</h2>
+                    <p class="content-block-text">La música nos acompaña en cada momento: anima, relaja o nos ayuda a concentrarnos. Escuchar tus canciones favoritas mejora el ánimo y conecta con recuerdos y emociones únicas.</p>
+                </div>
+            </section>
+
+            <section class="content-block" aria-labelledby="block2-heading">
+                <div class="content-block-inner">
+                    <h2 id="block2-heading" class="content-block-title">¿No sabes qué escuchar?</h2>
+                    <p class="content-block-text">Prueba explorar nuevos géneros o listas por estado de ánimo. A veces una canción que no conocías se convierte en tu nueva favorita.</p>
+                </div>
+            </section>
+
+            <section class="stack" id="stack" aria-labelledby="stack-heading">
+                <h2 id="stack-heading" class="section-title">Cómo está hecho</h2>
+                <p class="stack-intro">Tecnologías y prácticas usadas en este sitio — ideal para portfolio de desarrollador en formación.</p>
+                <div class="stack-grid">
+                    <div class="stack-card">
+                        <span class="stack-icon" aria-hidden="true">&lt;/&gt;</span>
+                        <h3>HTML5</h3>
+                        <p>Estructura semántica, accesibilidad y anclas para navegación.</p>
+                    </div>
+                    <div class="stack-card">
+                        <span class="stack-icon" aria-hidden="true">{ }</span>
+                        <h3>CSS3</h3>
+                        <p>Variables, Grid, Flexbox, animaciones y diseño responsive.</p>
+                    </div>
+                    <div class="stack-card">
+                        <span class="stack-icon" aria-hidden="true">JS</span>
+                        <h3>JavaScript</h3>
+                        <p>Menú móvil, smooth scroll y efectos al hacer scroll.</p>
+                    </div>
+                    <div class="stack-card">
+                        <span class="stack-icon" aria-hidden="true">⊡</span>
+                        <h3>Responsive</h3>
+                        <p>Breakpoints y experiencia usable en móvil y escritorio.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer" id="acerca">
+            <p class="footer-desc">Landing de práctica: semántica HTML5, CSS con variables y Grid, y JavaScript para menú responsive y smooth scroll. Sin Bootstrap ni librerías.</p>
+            <p class="footer-text">Hecho con <strong>HTML</strong>, <strong>CSS</strong> y <strong>JavaScript</strong> · Programador en formación</p>
+            <p class="footer-credit">Hecho por <strong>Gabriel Ramirez</strong></p>
+        </footer>
+    </div>
+
+    <!-- Música de fondo: añade tu archivo en assets/audio/background.mp3 -->
+    <div class="music-player" aria-label="Reproductor de música de fondo">
+        <audio id="bg-music" loop>
+            <source src="assets/audio/background.mp3" type="audio/mpeg">
+            <source src="assets/audio/background.ogg" type="audio/ogg">
+        </audio>
+        <button type="button" class="music-toggle" id="music-toggle" aria-label="Reproducir música de fondo" title="Play / Pausar música">
+            <span class="music-icon music-icon--play" aria-hidden="true">▶</span>
+            <span class="music-icon music-icon--pause" aria-hidden="true">❚❚</span>
+        </button>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
