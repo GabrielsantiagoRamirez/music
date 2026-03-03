@@ -1,7 +1,4 @@
-/**
- * Música — Landing
- * Menú móvil, smooth scroll, revelado al scroll y lista de reproducción
- */
+
 
 (function () {
     'use strict';
@@ -217,9 +214,14 @@
 
         if (volumeInput && audio) {
             audio.volume = 1;
+            function setVolumeBar() {
+                volumeInput.style.setProperty('--volume-pct', volumeInput.value + '%');
+            }
             volumeInput.addEventListener('input', function () {
                 audio.volume = this.value / 100;
+                setVolumeBar();
             });
+            setVolumeBar();
         }
 
         updatePlayButton(false);
