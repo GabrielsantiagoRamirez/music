@@ -591,9 +591,23 @@ img {
     height: 6px;
     -webkit-appearance: none;
     appearance: none;
+    --volume-pct: 100%;
     background: rgba(255, 255, 255, 0.15);
     border-radius: 3px;
     outline: none;
+}
+
+.playlist-volume-range::-webkit-slider-runnable-track {
+    height: 6px;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    background: linear-gradient(
+        to right,
+        var(--color-accent) 0%,
+        var(--color-accent) var(--volume-pct),
+        rgba(255, 255, 255, 0.15) var(--volume-pct),
+        rgba(255, 255, 255, 0.15) 100%
+    );
 }
 
 .playlist-volume-range::-webkit-slider-thumb {
@@ -601,6 +615,7 @@ img {
     appearance: none;
     width: 16px;
     height: 16px;
+    margin-top: -5px;
     border-radius: 50%;
     background: var(--color-accent);
     cursor: pointer;
@@ -614,6 +629,7 @@ img {
 .playlist-volume-range::-moz-range-thumb {
     width: 16px;
     height: 16px;
+    margin-top: -5px;
     border-radius: 50%;
     border: none;
     background: var(--color-accent);
@@ -623,6 +639,12 @@ img {
 
 .playlist-volume-range::-moz-range-thumb:hover {
     transform: scale(1.1);
+}
+
+.playlist-volume-range::-moz-range-track {
+    height: 6px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .playlist-list {
