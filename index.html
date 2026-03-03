@@ -116,15 +116,27 @@
         </footer>
     </div>
 
-    <!-- Música de fondo: añade tu archivo en assets/audio/background.mp3 -->
-    <div class="music-player" aria-label="Reproductor de música de fondo">
-        <audio id="bg-music" loop>
-            <source src="assets/audio/background.mp3" type="audio/mpeg">
-            <source src="assets/audio/background.ogg" type="audio/ogg">
-        </audio>
-        <button type="button" class="music-toggle" id="music-toggle" aria-label="Reproducir música de fondo" title="Play / Pausar música">
-            <span class="music-icon music-icon--play" aria-hidden="true">▶</span>
-            <span class="music-icon music-icon--pause" aria-hidden="true">❚❚</span>
+    <!-- Reproductor con lista de reproducción -->
+    <div class="music-player" aria-label="Reproductor con lista">
+        <div class="playlist-backdrop" id="playlist-backdrop" aria-hidden="true"></div>
+        <audio id="bg-music"></audio>
+
+        <div class="playlist-panel" id="playlist-panel" aria-hidden="true">
+            <div class="playlist-header">
+                <h3 class="playlist-title">Lista de reproducción</h3>
+                <button type="button" class="playlist-close" id="playlist-close" aria-label="Cerrar lista">×</button>
+            </div>
+            <p class="playlist-now" id="playlist-now">Elige una pista</p>
+            <div class="playlist-controls">
+                <button type="button" class="playlist-btn" id="playlist-prev" aria-label="Anterior">⏮</button>
+                <button type="button" class="playlist-btn playlist-btn--main" id="playlist-play" aria-label="Reproducir">▶</button>
+                <button type="button" class="playlist-btn" id="playlist-next" aria-label="Siguiente">⏭</button>
+            </div>
+            <ul class="playlist-list" id="playlist-list"></ul>
+        </div>
+
+        <button type="button" class="music-toggle" id="music-toggle" aria-label="Abrir lista de reproducción" title="Lista de reproducción">
+            <span class="music-icon music-icon--list" aria-hidden="true">♪</span>
         </button>
     </div>
 
