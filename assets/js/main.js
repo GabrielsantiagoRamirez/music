@@ -94,6 +94,7 @@
     var btnPlay = document.getElementById('playlist-play');
     var btnPrev = document.getElementById('playlist-prev');
     var btnNext = document.getElementById('playlist-next');
+    var volumeInput = document.getElementById('playlist-volume-input');
 
     var currentIndex = 0;
 
@@ -213,6 +214,13 @@
         audio.addEventListener('ended', function () {
             playNext();
         });
+
+        if (volumeInput && audio) {
+            audio.volume = 1;
+            volumeInput.addEventListener('input', function () {
+                audio.volume = this.value / 100;
+            });
+        }
 
         updatePlayButton(false);
     }

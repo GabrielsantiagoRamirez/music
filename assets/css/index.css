@@ -571,6 +571,60 @@ img {
     color: #fff;
 }
 
+.playlist-volume {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-lg);
+    border-bottom: 1px solid var(--color-border);
+    flex-shrink: 0;
+}
+
+.playlist-volume-label {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    min-width: 4.5rem;
+}
+
+.playlist-volume-range {
+    flex: 1;
+    height: 6px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 3px;
+    outline: none;
+}
+
+.playlist-volume-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    cursor: pointer;
+    transition: transform var(--transition);
+}
+
+.playlist-volume-range::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+}
+
+.playlist-volume-range::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: none;
+    background: var(--color-accent);
+    cursor: pointer;
+    transition: transform var(--transition);
+}
+
+.playlist-volume-range::-moz-range-thumb:hover {
+    transform: scale(1.1);
+}
+
 .playlist-list {
     list-style: none;
     overflow-y: auto;
